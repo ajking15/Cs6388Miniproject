@@ -1,14 +1,27 @@
-# StateMachineJoint
-This is an example Design studio aimed for developers relatively new to the [WebGME](https://webgme.org) platform.
-It allows model editing, simulation, and some limited model-checking functionality.
-The studio implements the finite state machine domain.
-For its special simulator visualization, it uses the [JointJS](https://www.jointjs.com/) javascript library.
+# Petrinet Miniproject - VideoOnDemand 
 
 ## Installation
-First, install the StateMachineJoint following:
-- [NodeJS](https://nodejs.org/en/) (LTS recommended)
+First, install the myminiproject following:
+- [NodeJS](https://nodejs.org/en/)
 - [MongoDB](https://www.mongodb.com/)
+- Run 'docker-compose up -d'
+- Go to Localhost:8888
 
-Second, start mongodb locally by running the `mongod` executable in your mongodb installation (you may need to create a `data` directory or set `--dbpath`).
+## Modeling
+This application models a Video On Demand Content delivery appliation. Modeling from logging in to the application and all they way viewing uploading video. 
+This modeling with help understand how a video is processed till uploading. This can be used to design and implemnt a content delivry system. 
 
-Then, run `webgme start` from the project root to start . Finally, navigate to `http://localhost:8888` to start using StateMachineJoint!
+A token can traverse throuout the model from end to end. 
+- Each Node is set as Place or Transition
+- Each edge is set as Place-Transtion And Transition-Place 
+
+SVGs are used to indicate how many tokens are assigned to a Place node.
+
+## Classification
+The application has a plugin enabled that identifies whether your model can be classified as one of the following
+1. Classifier
+
+
+## Visualization
+The application provides a PetriNet view and simulates the flow of the Video Content Delivery Application in a graph layout. At the moment
+this visualization is limited to a single token moving with a triggered annimation  but an support more.
