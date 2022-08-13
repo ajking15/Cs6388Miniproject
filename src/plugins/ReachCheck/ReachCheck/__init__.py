@@ -30,12 +30,12 @@ class ReachCheck(PluginBase):
         # we build the most simple graph representation possible
         nodes = core.load_children(active_node)
         for node in nodes:
-            if core.is_type_of(node, META['Place']): #State
+            if core.is_type_of(node, META['State']):
                 states.add(core.get_path(node))
             if core.is_type_of(node, META['Init']):
                 visited.add(core.get_path(node))
         for node in nodes:
-            if (core.is_type_of(node, META['Transition-Place']) or core.is_type_of(node, META['Place-Transition'])): #Transition
+            if core.is_type_of(node, META['Transition']):
                 if core.get_pointer_path(node, 'src') in graph:
                     graph[core.get_pointer_path(node, 'src')].append(core.get_pointer_path(node, 'dst'))
                 else:

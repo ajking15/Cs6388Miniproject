@@ -8,26 +8,27 @@
         "secondary": false,
         "widget": "src/visualizers/widgets/SimSM"
       },
-      "PrtriView": {
-        "src": "panels/PrtriView/PrtriViewPanel",
-        "title": "PrtriView",
-        "panel": "src/visualizers/panels/PrtriView",
+      "PetriNetView": {
+        "src": "panels/PetriNetView/PetriNetViewPanel",
+        "title": "PetriNetView",
+        "panel": "src/visualizers/panels/PetriNetView",
         "secondary": false,
-        "widget": "src/visualizers/widgets/PrtriView"
+        "widget": "src/visualizers/widgets/PetriNetView"
       }
     },
     "plugins": {
       "ReachCheck": {
         "src": "src/plugins/ReachCheck",
         "test": "test/plugins/ReachCheck"
+      },
+      "Classification": {
+        "src": "src/plugins/Classification",
+        "test": "test/plugins/Classification"
       }
     },
     "seeds": {
       "StateMachine": {
         "src": "src/seeds/StateMachine"
-      },
-      "PetriNet": {
-        "src": "src/seeds/PetriNet"
       }
     }
   },
